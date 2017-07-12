@@ -26,6 +26,13 @@ for (var i=5; i>-1; i-=1){
     console.log(myPokemonArray[i])
 }
 console.log()
-for (var i=0; ; myPokemonArray.length(); i++){
+for (var i=0; i<myPokemonArray.length; i++){
+    console.log(myPokemonArray[i])
+}
+console.log()
+for (var i=0; i<6; i++){
+    if (myPokemonArray.length>=5){
     console.log(myPokemonArray[i])
     }
+    
+}
