@@ -3,13 +3,12 @@ function setup(){
     background(225);
 }
 function mouseDragged(){
-    ellipse(mouseX, mouseY, 60, 5);
-    /* for (var i = 0; i < 100; i++) {
-     var r = random(50);
-     stroke(r*5);
-     line(50, i, 50+r, i);
-            
-        } */   
+    for (var i = 0; i < 100; i++) {
+        var r = random(50);
+        ellipse(mouseX, mouseY, random(5,10), random(5,10));
+        fill(random(0,255),random(0,255),random(0,255))
+        }
+           
     }
  
     
