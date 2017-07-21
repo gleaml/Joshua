@@ -39,8 +39,8 @@ function HP(value){
     this.value=value
 }
 //The Actual Pokemon
-var Luxray = [[new newAttacks('Thunderbolt', 'Electric','95'),new newAttacks('Thunder', 'Electric','120'), new newAttacks('Crunch', 'Dark','80'),new newAttacks('Ice Fang', 'Ice','65')], [new HP(301)];
-var Charizard = [[new newAttacks('Fire Blast', 'Fire','120'),new newAttacks('Flamethrower', 'Fire','95'), new newAttacks('Dragon Claw', 'Dragon','80'),new newAttacks('Wing Attack', 'Flying','65')], [new HP(297)];
+var Luxray = [[new newAttacks('Thunderbolt', 'Electric','95'),new newAttacks('Thunder', 'Electric','120'), new newAttacks('Crunch', 'Dark','80'),new newAttacks('Ice Fang', 'Ice','65')], [new HP(301)]];
+var Charizard = [[new newAttacks('Fire Blast', 'Fire','120'),new newAttacks('Flamethrower', 'Fire','95'), new newAttacks('Dragon Claw', 'Dragon','80'),new newAttacks('Wing Attack', 'Flying','65')], [new HP(297)]];
 
 //HP Changing
 function pokemonAttacks(pokemon1,pokemon2){
