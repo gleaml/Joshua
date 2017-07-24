@@ -7,8 +7,8 @@ function setup(){
     
 }
 //Player Coordinates
-p_x=285;//Player X coordinate
-p_y=565;//Player Y coordinate
+var p_x=285;//Player X coordinate
+var p_y=565;//Player Y coordinate
 
 //Alien Speed
 var w = 4;
@@ -16,6 +16,9 @@ var w1 = 4;
 
 var xPos1=0;
 var xPos2=0;
+
+var yPos=0;
+
 function draw(){
    //Environment
     background(51)   
@@ -54,35 +57,58 @@ var level=1;
     text("Level: "+ level + "",445,687);
 
 //movement of Enemies
-    if(xPos1<50 || xPos1>620){
-        w = -w;
+    console.log(xPos1);
+    if(xPos1<50 || xPos1>620)w = -w;
         xPos1 += w;
-    }
-    if(xPos2<50 || xPos2>620){ 
-        w1 = -w1;
-        xPos2 += w1;
-    }    
+    
+     if(xPos2<50 || xPos2>620)w = -w;
+        xPos2 += w;
 
 //Enemies    
-    //level 1
+function newEnemies(xCor,yCor,width,height){
+    this.xCor=xCor,
+    this.yCor=yCor,
+    this.width=width,
+    this.height=height
+
+    this.eMove = eMovement(move){
+        this.move
+    }
+}
+    for (var i=0; i<1; x+=1){
+
+    }
     
-    for (var x=0; x<20; x+=5){
-        for(var y=150; y<300; y+=140){
-            xPos1=x*30 + 50;  
+ //   
+    
+    //level 1
+    //yPos=150;
+    //for (var x=0; x<20; x+=5){
+        
+        
+        /* xPos1 = x*30 + 50;
+        rect(xPos1, yPos, 50, 50);
+        } */
+        
+        
+        /*for( y=150; y<300; y+=140){
+            xPos1=x*30 + 50;
+            yPos=y;  
             fill(0, 153, 153);
-            rect(xPos1, y, 50, 50);
+            rect(xPos1, yPos, 50, 50);
             
         }
-    }
-    //level 2
+    }*?
+    /*
     for (var x=0; x<20; x+=5){
         for(var y=220; y<270; y+=70){
             xPos2=x*30 + 105;
+            yPos=y;
             fill(0, 153, 153);
-            rect(xPos2, y, 50, 50);
+            rect(xPos2, yPos, 50, 50);
             
         }
-    }
+    }*/
 
     //movement of Player
     if (keyIsDown(LEFT_ARROW)){ 
@@ -103,5 +129,4 @@ var level=1;
     fill(0, 153, 0);
     rect(p_x,p_y,75,75);
 
-    
 }
