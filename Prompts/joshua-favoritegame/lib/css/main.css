@@ -1,0 +1,36 @@
+body{
+    background-position: center;
+    background-size: cover;
+    font-family:Arial; 
+}
+.section{
+    font-family:Helvetica;
+    color: red;
+
+}
+button{
+    background: red;
+    color: black;
+    padding: 12px;
+    font-size: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+     
+}
+li {
+    float: left;
+    
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px ;
+    text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.navbar-brand > img {
+  display: block;
+}

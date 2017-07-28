@@ -9,7 +9,11 @@ function setup(){
 //Player Coordinates
 var p_x=285;//Player X coordinate
 var p_y=565;//Player Y coordinate
-
+//Projectiles
+var projectiles=[];
+//Aliens
+var aliens = [];
+var min_aliens=3;
 //Alien Speed
 var w = 4;
 var w1 = 4;
@@ -56,13 +60,7 @@ var level=1;
     fill(0, 102, 153);
     text("Level: "+ level + "",445,687);
 
-//movement of Enemies
-    console.log(xPos1);
-    if(xPos1<50 || xPos1>620)w = -w;
-        xPos1 += w;
-    
-     if(xPos2<50 || xPos2>620)w = -w;
-        xPos2 += w;
+
 
 //Enemies    
 function newEnemies(xCor,yCor,width,height){
@@ -71,9 +69,16 @@ function newEnemies(xCor,yCor,width,height){
     this.width=width,
     this.height=height
 
-    this.eMove = eMovement(move){
-        this.move
-    }
+    this.eMove = function(){
+        //movement of Enemies
+    if(this.xCor<50 || xCor>620)w = -w;
+        xPos1 += w;
+    
+    
+}
+
+function Ship_movement(){
+
 }
     for (var i=0; i<1; x+=1){
 
@@ -124,7 +129,7 @@ function newEnemies(xCor,yCor,width,height){
     if (p_x>620){
         p_x=2;
     }    
-   
+    
     //Player on the Board
     fill(0, 153, 0);
     rect(p_x,p_y,75,75);
