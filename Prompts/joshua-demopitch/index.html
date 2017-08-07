@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <!--p5 Library  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"> </script>
+
+        <!--Reference platform.js library here-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!--Reference Client ID in meta tag here-->
+        <meta name="google-signin-client_id" content="898050109039-tet6asonue006hq7gr9p2v6da4lp4nfe.apps.googleusercontent.com">
+
+         <!--jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!--Personal JS Library -->
+        <script src="app.js" ></script>
+
+        <!--Person Style Sheets Library -->
+        <link rel="stylesheet" href="main.css">
+        
+        <script>
+            var sound1="music/Guitar.css"
+            var sound2="music/Drums.mp3"
+            var sound3="music/Sax.mp3"
+            var sound4="music/Ocarina.wav"
+            var sound5="music/Violin.mp3"
+            var sound6="music/Trumpet.mp3"
+            
+            var x=Math.round(Math.random()*5)
+            if (x==0) x=sound1
+            else if (x==1) x=sound2
+            else if (x==2) x=sound3
+            else if (x==3) x=sound4
+            else if (x==4) x=sound5
+            else x=sound6
+            if (navigator.appName=="Microsoft Internet Explorer")
+            document.write('<bgsound src='+'"'+x+'"'+' loop="infinite">')
+                else 
+            document.write('<embed src='+'"'+x+'"'+'hidden="true" border="0" width="20" height="20" autostart="true" loop="true">')
+        </script>
+    </head>
+    <body>
+         <ul>
+            <li><a href="https://prelody.com">Prelody</a></li>
+            <li><a href="https://joshuaasc4.github.io/">Joshua's Website</a></li>
+            <li><a href="https://justinasc4.github.io/">Justin's Website</a></li>
+
+            <div class="signs">
+            <li><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+            <li><a href="#" class="signOut" onclick="onSignOut();">Sign out</a></li>
+            </div>
+        </ul>
+
+
+        <!-- Signing In and Signing Out -->
+        
+
+        <header>
+            <h1>Welcome <span class="userName">All</span></h1>    
+        </header>
+
+        <script language="JavaScript">
+            function random_imglink(){
+            var myimages=new Array()
+            myimages[1]="img/guitar.png";
+            myimages[2]="img/drum.png"
+            myimages[3]="img/ocarina.png"
+            myimages[4]="img/saxophone.png"
+            myimages[5]="img/violin.png"
+            myimages[6]="img/trumpet.png"
+            var ry=Math.floor(Math.random()*myimages.length)
+            if (ry==0)
+            ry=1
+            document.write('<img src="'+myimages[ry]+'" border=0>')
+            }
+            random_imglink()
+        </script>
+        <button type="Random"><link rel="Random Intrument" href=""></button>
+             <form id="instrument">
+                Instrument name:<br>
+                <input type="instrument" name="firstname"><br>
+                <button type="submit">Submit</button>
+            </form>     
+
+            <div id="copyright">
+					<ul class="links">
+						<li>© Prelody 2017. All rights reserved.</li><li>Design: By Joshua and Justin</li>
+					</ul>
+			</div>
+    </body>
+</html>
